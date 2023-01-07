@@ -48,7 +48,7 @@ export default function Home({shots}) {
 
 export async function getStaticProps() {
   
-  const res = await axios.get('https://api.dribbble.com/v2/user/shots?access_token=81de1f19592050b044ab40d29d6b95468e7845d037ddda85e9ebc7817214b199')
+  const res = await axios.get(`${process.env.API_URL}access_token=${process.env.TOKEN}`)
 
   return {
     props: {
